@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as SessionApiUtils from './util/session_api_util';
 import SessionReducer from './reducers/session_reducer';
+import configureStore from './store/store';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -11,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.login = SessionApiUtils.login;
   // window.user1 = {username: "timmy4", password: "password"};
   // window.user2 = {username: "timmy99", password: "password"};
+  const store = configureStore();
 
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
   ReactDOM.render(<h1>OMG SO MUCH SETUP</h1>, root);
 });
