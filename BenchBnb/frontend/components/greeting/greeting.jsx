@@ -1,6 +1,7 @@
 import React from 'React';
+import {Link} from 'react-router-dom';
 
-export const Greeting = ({currentUser, logout}) => {
+const Greeting = ({currentUser, logout}) => {
 
   if (currentUser) {
     return (
@@ -12,8 +13,12 @@ export const Greeting = ({currentUser, logout}) => {
   }
   return (
     <div>
-    <Link to='/signup'>Signup</Link>
-    <Link to='/login'>Login</Link>
+      <ul>
+        <li><Link to='/signup'>Signup</Link></li>
+        <li><Link to='/login'>Login</Link></li>
+    </ul>
     </div>
   );
 };
+
+export default Greeting;

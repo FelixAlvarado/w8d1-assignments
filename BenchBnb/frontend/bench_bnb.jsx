@@ -7,12 +7,12 @@ import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
-  // window.sessionReducer = SessionReducer;
-  // window.signup = SessionApiUtils.signup;
-  // window.logout = SessionApiUtils.logout;
-  // window.login = SessionApiUtils.login;
-  // window.user1 = {username: "timmy4", password: "password"};
-  // window.user2 = {username: "timmy99", password: "password"};
+  window.sessionReducer = SessionReducer;
+  window.signup = SessionApiUtils.signup;
+  window.logout = SessionApiUtils.logout;
+  window.login = SessionApiUtils.login;
+  window.user1 = {username: "timmy4", password: "password"};
+  window.user2 = {username: "timmy99", password: "password"};
   const store = configureStore();
 
   // window.getState = store.getState;
